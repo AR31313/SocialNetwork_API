@@ -2,16 +2,17 @@
   "name": "28-Stu_Mini-Project",
   "version": "1.0.1",
   "description": "Mongoose back-end project - Main",
-  "main": "index.js",
+  "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "start": "node index",
-    "dev": "nodemon index",
+    "start": "node server",
+    "dev": "nodemon server",
     "seed": "node utils/seed",
     "heroku-postbuild": "node utils/seed.js"
   },
   "dependencies": {
     "express": "^4.17.1",
+    "moment": "^2.29.3",
     "mongoose": "^6.0.13"
   },
   "devDependencies": {
