@@ -12,7 +12,7 @@ const {
 router.route('/').post(createUser).get(getAllUsers);
 
 // /api/users/:users_Id
-router.route('/:Id')
+router.route('/:id')
   .get(getUserById)
   .put(updateUser)
 // .delete(deleteUser)
