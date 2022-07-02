@@ -39,7 +39,7 @@ module.exports = {
         res.status(400).json(err);
       });
   },
-  //Read, GET all thoughts 
+  // Read, GET all thoughts 
   getAllThoughts(req, res) {
     Thought.find({})
       .populate({ path: 'reactions', select: '-__v' })
