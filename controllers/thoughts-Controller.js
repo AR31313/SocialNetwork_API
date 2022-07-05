@@ -64,7 +64,7 @@ module.exports = {
 
   // Delete a Thoughts
   deleteThought({ params }, res) {
-    Thought.findOneAndDelete({ _id: params.Id })
+    Thought.findOneAndDelete({ _id: params.id })
       .then((dbThoughtData) => {
         return dbThoughtData ? res.json({ message: 'Thoughts sucessfully deleted!' }) : res.status(404).json({ message: 'No thought with that ID' });
       }).catch((err) => res.status(500).json(err));
