@@ -68,7 +68,23 @@ module.exports = {
       .then((dbThoughtData) => {
         return dbThoughtData ? res.json({ message: 'Thoughts sucessfully deleted!' }) : res.status(404).json({ message: 'No thought with that ID' });
       }).catch((err) => res.status(500).json(err));
-  }
+  },
 
+  // add a reaction to thought
+  addReaction({ params, body }, res) {
+    Thought.findOneAndUpdate(
+      { _id: params.thoughtId },
+      { $push: { reactions: { reactionBody: body.reactionBody, username: body.username } } },
+      { new: true, runValidators: true })
+      .then(dbThoughtData => dbThoughtData ? res.json(dbThoughtData) : res.status(404).json({ message: 'No Reaction with that ID' }))
+      .catch(err => res.status(400).json(err))
+  },
+
+  // remove a reaction from thought
+  deleteReaction({ params }, res) {
+    Thought.findOneAndUpdate({ _id: params.thoughtId }, { $pull: { reactions: { _id: params.reactionId } } }, { new: true })
+      .then(dbThoughtData => dbThoughtData ? res.json({ message: 'Reactions sucessfully deleted!' }) : res.status(404).json({ message: 'No Reaction with that ID' }))
+      .catch(err => res.status(404).json(err))
+  }
 
 }
