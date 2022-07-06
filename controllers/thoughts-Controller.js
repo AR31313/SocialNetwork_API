@@ -53,7 +53,7 @@ module.exports = {
   // Update a Thought
   updateThought({ params, body }, res) {
     Thought.findOneAndUpdate(
-      { _id: params.Id },
+      { _id: params.id },
       body,
       { runValidators: true, new: true }
     )
