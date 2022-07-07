@@ -28,8 +28,6 @@ https://github.com/AR31313/SocialNetwork_API
 
 ### Walkthrough Video:
 
-<iframe src="https://drive.google.com/file/d/1-DGNO6xLkX_-ltbO2YCj3xGtcs9amtXG/preview" width="640" height="480"></iframe>
-
 https://drive.google.com/file/d/138tDJqCwLyfcDfC4QzoVzE5_aVXdJDQk/view?usp=sharing
 
 ---
