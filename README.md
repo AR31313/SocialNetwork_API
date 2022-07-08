@@ -7,7 +7,7 @@ To build an API for a social network web application where users can share their
 ---
 
 - Express.js for used for routing
-- [Mongoose](https://www.npmjs.com/package/mongoose) packages, to connect to a MongoDB database.
+- [Mongoose](https://www.npmjs.com/package/mongoose) packages is used to connect to a MongoDB database.
 - connects to an [Express.js](https://www.npmjs.com/package/express) back end.
 
 ## User Story
